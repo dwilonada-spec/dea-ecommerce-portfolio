@@ -10,94 +10,154 @@ const RESUME_URL = "/Dea_Annisa_Wilona_Resume.pdf";
 
 const navItems = [
   { label: "About", href: "#about" },
+  { label: "Case Studies", href: "#case-studies" },
   { label: "Evidence", href: "#evidence" },
-  { label: "Case Study", href: "#case-study" },
-  { label: "Projects", href: "#projects" },
   { label: "Results", href: "#results" },
-  { label: "Tools", href: "#tools" },
+  { label: "Skills", href: "#skills" },
   { label: "Contact", href: "#contact" },
 ];
 
 const metrics = [
-  { value: "5+", label: "Years in ecommerce", proof: "Live operating experience across marketplace and social commerce channels." },
-  { value: "2,000+", label: "SKUs managed", proof: "Catalog, listing, attributes, visibility, and marketplace readiness." },
-  { value: "50,000+", label: "Orders coordinated", proof: "Order flow, fulfillment, returns, customer support, and tracking controls." },
-  { value: "300+", label: "Campaigns executed", proof: "Vouchers, pricing, seasonal events, ads, and double-date campaigns." },
-  { value: "100+", label: "SOPs developed", proof: "CS, fulfillment, HR, inventory, returns, COD, QC, KPI, and marketplace workflows." },
-  { value: "5", label: "Marketplaces managed", proof: "Shopee, TikTok Shop, Tokopedia, Zalora, and Lazada exposure." },
+  { value: "5+", label: "Years in ecommerce operations", proof: "Hands-on marketplace, commercial, fulfillment, customer, and team operations." },
+  { value: "2,000+", label: "SKUs managed", proof: "Product lifecycle work across listings, catalog readiness, pricing, stock, and marketplace visibility." },
+  { value: "50,000+", label: "Orders coordinated", proof: "Order flow, fulfillment, returns, customer operations, and follow-up controls." },
+  { value: "300+", label: "Marketplace campaigns", proof: "Double-date events, flash sales, vouchers, promotional pricing, and seasonal campaigns." },
+  { value: "100+", label: "SOPs and workflow controls", proof: "CS, fulfillment, HR, inventory, returns, COD, QC, KPI, and recurring workflows." },
+  { value: "5", label: "Marketplace platforms", proof: "Shopee, TikTok Shop, Lazada, Tokopedia, and Zalora operating exposure." },
   { value: "3", label: "Brands operated", proof: "Reven, HelloBare, and NA-IVE operating evidence appears in the portfolio." },
-  { value: "6+", label: "Team members led", proof: "Cross-functional work across CS, admin, content, fulfillment, and operations." },
+  { value: "6+", label: "Team members coordinated", proof: "Cross-functional work across CS, marketplace admin, content, warehouse, and operations." },
 ];
 
 const transformations = [
   {
-    before: "Orders tracked manually",
-    after: "Order dashboard used to coordinate 50,000+ marketplace orders",
+    before: "Marketplace work lived across separate channels",
+    after: "Dashboards, order trackers, SOPs, and review routines made daily operations visible",
   },
   {
-    before: "Revenue checked per platform",
-    after: "Seller-center dashboards reviewed across Shopee, TikTok Shop, Tokopedia, and Zalora",
+    before: "Pricing changes were a business risk",
+    after: "Cost updates, margin checks, promotional pricing, and marketplace implementation were tracked together",
+  },
+  {
+    before: "Inventory problems depended on ad hoc follow-up",
+    after: "Replenishment, damaged stock, returns, and storage controls became documented workflows",
   },
   {
     before: "Knowledge stayed in chat",
-    after: "100+ SOPs organized into a working operations library",
+    after: "100+ SOPs turned recurring work into repeatable operating standards",
   },
   {
-    before: "Team performance was subjective",
-    after: "KPI system made review, coaching, and accountability measurable",
+    before: "Team ownership depended on memory",
+    after: "CS schedules, Discord routines, and KPI tracking clarified responsibility and handoffs",
   },
   {
-    before: "CS coverage depended on memory",
-    after: "Customer service schedule created daily ownership and handoff clarity",
-  },
-  {
-    before: "Marketplace launch was a checklist risk",
-    after: "Zalora launch connected catalog setup, orders, revenue, and ads tracking",
+    before: "AI was only a general productivity tool",
+    after: "AI now supports research, SOP drafting, communication, analysis support, and repetitive admin work with human review",
   },
 ];
 
-const projects = [
+const caseStudies = [
   {
-    title: "Scaled Multi-Brand Ecommerce Operations",
-    problem: "Marketplace execution depended on manual follow-up, owner memory, and scattered reporting.",
-    actions: ["Built order, revenue, ads, and KPI dashboards", "Connected SOPs with Discord task routines", "Reviewed execution through weekly operating checks"],
-    outcome: "Centralized daily control for 2,000+ SKUs and 50,000+ coordinated orders.",
-    skills: ["Marketplace Ops", "Dashboards", "Team Coordination"],
+    title: "Multi-Brand Marketplace Operations",
+    focus: "Marketplace execution, reporting, campaigns, and team coordination",
+    challenge: "Daily operations spanned multiple brands and marketplaces, with orders, campaigns, reporting, seller-center tasks, and team follow-up spread across different tools.",
+    approach: "Turn scattered operating work into visible controls: order trackers, seller-center review, SOPs, KPI routines, and daily team communication.",
+    execution: [
+      "Coordinated marketplace work across Shopee, TikTok Shop, Lazada, Tokopedia, and Zalora.",
+      "Managed listing, campaign, promotion, customer operation, order, and reporting routines.",
+      "Connected dashboards, SOPs, schedules, and Discord operating cadence so execution did not depend on memory.",
+    ],
+    impact: "Supported 2,000+ SKUs, approximately 50,000+ customer orders, and 300+ marketplace campaigns without presenting unsupported performance claims.",
+    evidence: [
+      { label: "Orders tracker", image: "/evidence/orders-list-july-2026.webp" },
+      { label: "Shopee revenue", image: "/evidence/reven-shopee-revenue-2025.webp" },
+      { label: "SOP system", image: "/evidence/sop-master-lists.webp" },
+    ],
+    skills: ["Marketplace Operations", "Reporting", "Campaign Execution", "Team Coordination"],
   },
   {
-    title: "HelloBare Marketplace Expansion to Zalora",
-    problem: "Zalora required stricter catalog, product attribute, image, and seller-center discipline.",
-    actions: ["Prepared marketplace-ready product catalog", "Set up storefront and seller-center operations", "Tracked revenue, orders, and sponsored ads after launch"],
-    outcome: "Supported marketplace expansion with storefront, order, revenue, and ads evidence.",
-    skills: ["Zalora", "Catalog Ops", "Marketplace Launch"],
+    title: "Inventory & Fulfillment Process Improvement",
+    focus: "Inventory management, replenishment, warehouse coordination, and risk control",
+    challenge: "Inventory and fulfillment work needed clearer controls for replenishment, storage, discrepancies, damaged stock, returns, and handoffs between internal and third-party warehouse operations.",
+    approach: "Document recurring failure points and build operating routines that make stock movement, damaged items, repairs, returns, and fulfillment responsibilities easier to track.",
+    execution: [
+      "Coordinated stock readiness, replenishment schedules, and fulfillment responsibilities.",
+      "Documented damaged inventory, repair/defect handling, returns, and storage controls.",
+      "Used SOPs and trackers to reduce dependency on informal follow-up.",
+    ],
+    impact: "Positioned inventory and fulfillment as controlled operations work, not just back-office admin.",
+    evidence: [
+      { label: "SOP library", image: "/evidence/sop-master-lists.webp" },
+      { label: "Orders workflow", image: "/evidence/orders-list-july-2026.webp" },
+      { label: "Team cadence", image: "/evidence/discord-team-communication.webp" },
+    ],
+    skills: ["Inventory", "Fulfillment", "Warehouse Coordination", "SOP Development"],
   },
   {
-    title: "NA-IVE Brand Launch",
-    problem: "A new leather goods brand needed channels, product presentation, and operating routines from zero.",
-    actions: ["Built Shopee and TikTok Shop presence", "Coordinated content and product display", "Linked storefront work with fulfillment and risk workflows"],
-    outcome: "Moved the brand from concept into active marketplace and social commerce channels.",
-    skills: ["Brand Launch", "Shopee", "TikTok Shop"],
+    title: "Pricing & Margin Operations",
+    focus: "COGS updates, pricing decisions, promotional pricing, and profitability monitoring",
+    challenge: "Supplier cost and reseller pricing changes required careful marketplace implementation so price updates, promotional mechanics, and margin monitoring stayed commercially sustainable.",
+    approach: "Treat pricing as an operating system: track product costs, review margin signals, adjust marketplace pricing gradually where needed, and connect campaign decisions with profitability context.",
+    execution: [
+      "Managed product cost and pricing updates across operational records.",
+      "Handled reseller pricing changes, promotional pricing, and marketplace implementation.",
+      "Used spreadsheets and seller-center dashboards for sales, margin, and campaign review with human validation.",
+    ],
+    impact: "Strengthened commercial operations credibility without inventing margin improvement percentages.",
+    evidence: [
+      { label: "Shopee revenue", image: "/evidence/reven-shopee-revenue-2025.webp" },
+      { label: "Shopee ads", image: "/evidence/shopee-ads-may-july-2026.webp" },
+      { label: "Tokopedia revenue", image: "/evidence/reven-tokped-revenue-2025-2026.webp" },
+    ],
+    skills: ["Pricing", "COGS", "Margin Monitoring", "Campaign Review"],
   },
+  {
+    title: "Brand and Marketplace Expansion",
+    focus: "Catalog preparation, listing setup, launch readiness, and post-launch review",
+    challenge: "New brand and marketplace expansion work needed product catalog readiness, pricing, storefront setup, listing quality, fulfillment workflows, and post-launch performance review.",
+    approach: "Connect marketplace launch tasks with operating controls so the work goes beyond a published storefront.",
+    execution: [
+      "Prepared product catalog, pricing, listings, storefront structure, and marketplace compliance steps.",
+      "Supported HelloBare expansion to Zalora and NA-IVE channel setup across Shopee and TikTok Shop.",
+      "Reviewed seller-center orders, revenue, sponsored ads, and storefront evidence after launch.",
+    ],
+    impact: "Shows marketplace expansion capability from setup through operational review.",
+    evidence: [
+      { label: "Zalora storefront", image: "/evidence/hellobare-zalora-landing-page.webp" },
+      { label: "Zalora orders", image: "/evidence/zalora-seller-center-hellobare.webp" },
+      { label: "NA-IVE Shopee", image: "/evidence/na-ive-shopee-landing-page-2.webp" },
+    ],
+    skills: ["Marketplace Launch", "Catalog Operations", "Pricing", "Fulfillment Readiness"],
+  },
+];
+
+const aiUseCases = [
+  "SOP drafting and structuring",
+  "Operational problem-solving and decision support",
+  "Commercial and business analysis support",
+  "Research and information synthesis",
+  "Internal briefs and stakeholder communication",
+  "Recruitment and candidate-screening support",
+  "Workflow design and process documentation",
+  "Spreadsheet and formula assistance with human validation",
+  "Marketplace and content research",
+  "Templates, standardized communication, and repetitive admin acceleration",
+  "Portfolio iteration through Codex with human direction and final judgment",
+];
+
+const supportProjects = [
   {
     title: "KPI and Performance Management System",
     problem: "Team performance was hard to evaluate without shared targets and review evidence.",
     actions: ["Designed KPI scoring by role", "Built weekly monitoring sheets", "Connected review notes to operational behavior"],
     outcome: "Improved accountability and made coaching less subjective.",
-    skills: ["KPI Design", "People Ops", "Google Sheets"],
-  },
-  {
-    title: "SOP and Workflow Standardization",
-    problem: "Critical work depended on individual memory as order volume, SKUs, and team responsibility grew.",
-    actions: ["Built SOP master lists", "Documented CS, fulfillment, HR, return, COD, QC, and inventory procedures", "Defined repeatable standards for training and handoff"],
-    outcome: "Reduced dependency on memory and made execution easier to repeat.",
-    skills: ["SOPs", "Documentation", "Process Improvement"],
+    skills: ["KPI Tracking", "Team Coordination", "Google Sheets"],
   },
   {
     title: "AI-Assisted Operations",
-    problem: "SOP writing, reporting, SEO, HR documentation, and admin tasks took too much operator time.",
-    actions: ["Used ChatGPT, Codex, and Gemini for structured documentation", "Built prompts for SOP, KPI, marketplace, SEO, HR, and content workflows", "Kept human review in business decisions"],
-    outcome: "Improved documentation speed while preserving operator judgment.",
-    skills: ["ChatGPT", "Codex", "Gemini"],
+    problem: "Documentation, research, communication, and repetitive admin work needed more structure and speed without outsourcing business judgment.",
+    actions: ["Used ChatGPT, Codex, and Gemini for documentation, research, analysis support, workflow design, and communication drafting", "Validated outputs against business context before use"],
+    outcome: "Improved operating speed and consistency while keeping ecommerce and operations judgment primary.",
+    skills: ["AI-Assisted Operations", "Workflow Improvement", "Business Judgment"],
   },
 ];
 
@@ -108,7 +168,7 @@ const evidenceItems = [
     purpose: "Production sheet for product videos, campaign content, due dates, status, and approvals.",
     problem: "Keeps content execution from becoming scattered across chat and memory.",
     skills: ["Google Sheets", "Content Ops", "Campaign Readiness"],
-    project: "NA-IVE Brand Launch",
+    project: "Brand and Marketplace Expansion",
   },
   {
     title: "Customer Service Schedule",
@@ -116,7 +176,7 @@ const evidenceItems = [
     purpose: "Daily CS coverage plan with ownership, handoff, and escalation windows.",
     problem: "Protects response consistency when several people support the same store.",
     skills: ["CS Operations", "Scheduling", "Team Coordination"],
-    project: "Scaled Multi-Brand Ecommerce Operations",
+    project: "Multi-Brand Marketplace Operations",
   },
   {
     title: "Discord Team Operating Cadence",
@@ -124,7 +184,7 @@ const evidenceItems = [
     purpose: "Daily checklist and task communication for a distributed operating team.",
     problem: "Makes work visible so follow-up does not depend on one person remembering everything.",
     skills: ["Async Ops", "Team Management", "Workflow Control"],
-    project: "KPI and Performance Management System",
+    project: "Multi-Brand Marketplace Operations",
   },
   {
     title: "HelloBare Zalora Storefront",
@@ -132,7 +192,7 @@ const evidenceItems = [
     purpose: "Customer-facing proof of a completed Zalora marketplace launch.",
     problem: "Shows catalog and storefront execution beyond an internal launch plan.",
     skills: ["Zalora", "Catalog Launch", "Marketplace Compliance"],
-    project: "HelloBare Marketplace Expansion to Zalora",
+    project: "Brand and Marketplace Expansion",
   },
   {
     title: "HelloBare Zalora Revenue Dashboard",
@@ -140,7 +200,7 @@ const evidenceItems = [
     purpose: "Revenue dashboard used after the Zalora launch.",
     problem: "Connects marketplace setup with sales review and channel traction.",
     skills: ["Revenue Tracking", "Seller Center", "Performance Review"],
-    project: "HelloBare Marketplace Expansion to Zalora",
+    project: "Brand and Marketplace Expansion",
   },
   {
     title: "KPI 2026 System",
@@ -156,7 +216,7 @@ const evidenceItems = [
     purpose: "Brand channel supporting product trust and marketplace traffic.",
     problem: "Gives a new brand proof outside seller-center listings.",
     skills: ["Content Coordination", "Brand Consistency", "Social Commerce"],
-    project: "NA-IVE Brand Launch",
+    project: "Brand and Marketplace Expansion",
   },
   {
     title: "NA-IVE Shopee Brand Landing Page",
@@ -164,7 +224,7 @@ const evidenceItems = [
     purpose: "Shopee storefront merchandising for product positioning and first impression.",
     problem: "Improves shopper understanding before they compare individual listings.",
     skills: ["Shopee", "Storefront Merchandising", "Product Presentation"],
-    project: "NA-IVE Brand Launch",
+    project: "Brand and Marketplace Expansion",
   },
   {
     title: "NA-IVE Shopee Product Blocks",
@@ -172,7 +232,7 @@ const evidenceItems = [
     purpose: "Product grouping and browsing structure inside Shopee.",
     problem: "Prevents listings from feeling like an unorganized product dump.",
     skills: ["Marketplace UX", "Listing Structure", "Visual Systems"],
-    project: "NA-IVE Brand Launch",
+    project: "Brand and Marketplace Expansion",
   },
   {
     title: "NA-IVE Shopee Seller Page",
@@ -180,7 +240,7 @@ const evidenceItems = [
     purpose: "Seller page with brand identity, vouchers, product recommendations, and navigation.",
     problem: "Connects promotion setup with store browsing behavior.",
     skills: ["Shopee Seller Center", "Campaign Setup", "Store Operations"],
-    project: "NA-IVE Brand Launch",
+    project: "Brand and Marketplace Expansion",
   },
   {
     title: "NA-IVE TikTok Shop Presence",
@@ -188,7 +248,7 @@ const evidenceItems = [
     purpose: "TikTok Shop presence linking content, profile, product visibility, and shop channel.",
     problem: "Shows social commerce execution beyond content posting.",
     skills: ["TikTok Shop", "Social Commerce", "Content Ops"],
-    project: "NA-IVE Brand Launch",
+    project: "Brand and Marketplace Expansion",
   },
   {
     title: "Orders List July 2026",
@@ -196,10 +256,10 @@ const evidenceItems = [
     purpose: "Order tracker used to coordinate marketplace orders, payment, shipping, and follow-up.",
     problem: "Supports the 50,000+ order claim with a real operating control.",
     skills: ["Order Management", "Google Sheets", "Fulfillment Control"],
-    project: "Scaled Multi-Brand Ecommerce Operations",
+    project: "Multi-Brand Marketplace Operations",
   },
   {
-    title: "Founder Instagram Content System",
+    title: "Business Instagram Content System",
     image: "/evidence/personal-account-instagram.webp",
     purpose: "Business communication channel for ecommerce and operations context.",
     problem: "Shows judgment in explaining business work, not only doing internal tasks.",
@@ -207,7 +267,7 @@ const evidenceItems = [
     project: "AI-Assisted Operations",
   },
   {
-    title: "Founder TikTok Content System",
+    title: "Business TikTok Content System",
     image: "/evidence/personal-account-tiktok.webp",
     purpose: "Short-form channel for ecommerce education and business documentation.",
     problem: "Connects operator thinking with public-facing communication.",
@@ -220,7 +280,7 @@ const evidenceItems = [
     purpose: "Shopee dashboard for sales, orders, conversion, product movement, and store health.",
     problem: "Makes marketplace decisions less dependent on instinct.",
     skills: ["Shopee Analytics", "Revenue Review", "Campaign Evaluation"],
-    project: "Scaled Multi-Brand Ecommerce Operations",
+    project: "Pricing & Margin Operations",
   },
   {
     title: "Reven TikTok Revenue Dashboard",
@@ -228,7 +288,7 @@ const evidenceItems = [
     purpose: "TikTok Shop dashboard for GMV, traffic, product data, and daily movement.",
     problem: "Separates visible activity from measurable channel performance.",
     skills: ["TikTok Seller Center", "GMV Analysis", "Channel Monitoring"],
-    project: "Scaled Multi-Brand Ecommerce Operations",
+    project: "Multi-Brand Marketplace Operations",
   },
   {
     title: "Reven Tokopedia Revenue Dashboard",
@@ -236,7 +296,7 @@ const evidenceItems = [
     purpose: "Tokopedia revenue dashboard for multi-channel business review.",
     problem: "Keeps channel decisions comparable across marketplaces.",
     skills: ["Tokopedia", "Marketplace Analytics", "Multi-Channel Ops"],
-    project: "Scaled Multi-Brand Ecommerce Operations",
+    project: "Pricing & Margin Operations",
   },
   {
     title: "Shopee Ads May-July 2026",
@@ -244,7 +304,7 @@ const evidenceItems = [
     purpose: "Ads dashboard for spend, clicks, sales from ads, and product ad performance.",
     problem: "Keeps campaign decisions tied to margin and sales signals.",
     skills: ["Shopee Ads", "Budget Control", "Performance Marketing Ops"],
-    project: "Marketplace Performance Improvement",
+    project: "Pricing & Margin Operations",
   },
   {
     title: "Shopee Seller Center Product Operations",
@@ -252,7 +312,7 @@ const evidenceItems = [
     purpose: "Seller-center product operations: listings, compliance notices, stock, and status.",
     problem: "Proves hands-on platform execution, not only external reporting.",
     skills: ["Shopee Seller Center", "Product Ops", "Listing Maintenance"],
-    project: "Scaled Multi-Brand Ecommerce Operations",
+    project: "Multi-Brand Marketplace Operations",
   },
   {
     title: "SOP Master List",
@@ -260,7 +320,7 @@ const evidenceItems = [
     purpose: "SOP library for categories, workflow ownership, failure points, and fixes.",
     problem: "Moves process knowledge out of chat and into a repeatable system.",
     skills: ["SOP Development", "Risk Control", "Documentation"],
-    project: "SOP and Workflow Standardization",
+    project: "Inventory & Fulfillment Process Improvement",
   },
   {
     title: "Team Leave Application Form",
@@ -268,7 +328,7 @@ const evidenceItems = [
     purpose: "HR operating form for leave categories, approval logic, and team availability.",
     problem: "Protects daily operations when a small team has time-off requests.",
     skills: ["HR Ops", "Policy Documentation", "Team Planning"],
-    project: "SOP and Workflow Standardization",
+    project: "Inventory & Fulfillment Process Improvement",
   },
   {
     title: "TikTok Seller Center Product Operations",
@@ -276,7 +336,7 @@ const evidenceItems = [
     purpose: "TikTok Seller Center product management, stock visibility, and platform prompts.",
     problem: "Keeps social commerce products ready for sales and issue review.",
     skills: ["TikTok Seller Center", "Product Readiness", "Stock Monitoring"],
-    project: "Scaled Multi-Brand Ecommerce Operations",
+    project: "Multi-Brand Marketplace Operations",
   },
   {
     title: "Zalora Ads Dashboard",
@@ -284,7 +344,7 @@ const evidenceItems = [
     purpose: "Zalora sponsored ads dashboard for impressions, clicks, sales, and cost.",
     problem: "Measures paid visibility after marketplace expansion.",
     skills: ["Zalora Ads", "Campaign Review", "Performance Tracking"],
-    project: "HelloBare Marketplace Expansion to Zalora",
+    project: "Brand and Marketplace Expansion",
   },
   {
     title: "Zalora Seller Center Orders",
@@ -292,91 +352,101 @@ const evidenceItems = [
     purpose: "Zalora seller-center order workflow after launch.",
     problem: "Shows post-launch operations, not just a published storefront.",
     skills: ["Zalora Seller Center", "Order Management", "Marketplace Expansion"],
-    project: "HelloBare Marketplace Expansion to Zalora",
+    project: "Brand and Marketplace Expansion",
   },
 ];
 
 const evidenceChains = [
-  ["Marketplace Operations", "50,000+ order tracker", "Revenue dashboards", "SOP library", "Result: daily control"],
-  ["Team Management", "CS schedule", "Discord task cadence", "KPI 2026", "Result: clearer accountability"],
-  ["Marketplace Expansion", "Zalora storefront", "Seller-center orders", "Zalora ads", "Result: launch plus review"],
-  ["Brand Launch", "NA-IVE social channels", "Shopee storefront", "TikTok Shop", "Result: channel execution"],
+  ["Marketplace Operations", "Order tracker", "Seller-center dashboards", "SOP library", "Recruiter signal: daily control"],
+  ["Commercial Operations", "COGS updates", "Pricing implementation", "Campaign review", "Recruiter signal: business judgment"],
+  ["Inventory and Fulfillment", "Replenishment", "Damage and returns handling", "Workflow documentation", "Recruiter signal: risk control"],
+  ["Marketplace Expansion", "Catalog setup", "Seller-center orders", "Ads and revenue review", "Recruiter signal: launch plus follow-through"],
 ];
 
-const featuredCaseStudy = {
-  title: "Scaling Multi-Brand Ecommerce Operations",
-  situation:
-    "From 2023 to 2026, Dea rebuilt ecommerce operations across Reven, HelloBare, and NA-IVE while managing marketplace work across Shopee, TikTok Shop, Tokopedia, and Zalora.",
-  problem:
-    "The operating risk was not one missing tool. It was scattered execution: orders, revenue, ads, SOPs, CS coverage, and team review lived in separate places.",
-  actions: [
-    "Centralized order tracking for marketplace fulfillment and follow-up.",
-    "Built revenue and ads dashboards for seller-center review.",
-    "Created SOP and KPI systems so team execution could be reviewed.",
-    "Used Discord and CS schedules to keep daily ownership visible.",
-  ],
-  evidence: [
-    { label: "Orders", image: "/evidence/orders-list-july-2026.webp", caption: "Used to coordinate marketplace order flow." },
-    { label: "Revenue", image: "/evidence/reven-shopee-revenue-2025.webp", caption: "Seller-center review for Shopee performance." },
-    { label: "SOPs", image: "/evidence/sop-master-lists.webp", caption: "Process library for repeatable execution." },
-  ],
-  result:
-    "The result was not a prettier workflow. It was a more controlled operation: 2,000+ SKUs, 50,000+ coordinated orders, 300+ campaigns, and 100+ SOPs supported by systems recruiters can inspect.",
-  lessons:
-    "The strongest operator signal is the pattern: when work becomes messy, Dea turns it into a dashboard, checklist, SOP, cadence, or review system.",
-};
-
-const toolGroups = [
+const skillGroups = [
   {
-    group: "Marketplace",
-    tools: [
-      ["Shopee Seller Center", "Expert"],
-      ["TikTok Shop Seller Center", "Expert"],
-      ["Tokopedia Seller", "Advanced"],
-      ["Zalora Seller Center", "Advanced"],
-      ["Lazada Seller Center", "Intermediate"],
+    group: "Marketplace Operations",
+    items: [
+      "Shopee Seller Center",
+      "TikTok Shop Seller Center",
+      "Lazada Seller Center",
+      "Tokopedia Seller",
+      "Zalora Seller Center",
+      "Marketplace campaigns and promotions",
+      "Product listing and seller-center administration",
     ],
   },
   {
-    group: "Operations",
-    tools: [
-      ["Google Sheets", "Advanced"],
-      ["Microsoft Excel", "Advanced"],
-      ["Google Docs", "Advanced"],
-      ["Google Calendar", "Operational use"],
-      ["Google Drive", "Advanced"],
+    group: "Commercial Operations",
+    items: [
+      "Pricing decisions",
+      "Product cost and COGS management",
+      "Promotional pricing",
+      "Margin monitoring",
+      "Marketplace performance analysis",
+      "Campaign review",
     ],
   },
   {
-    group: "AI",
-    tools: [
-      ["ChatGPT", "Expert"],
-      ["Codex", "Advanced"],
-      ["Gemini", "Advanced"],
+    group: "Operations and Fulfillment",
+    items: [
+      "Inventory management",
+      "Replenishment scheduling",
+      "Warehouse coordination",
+      "Fulfillment workflows",
+      "Returns",
+      "Damaged stock handling",
+      "Customer operations",
     ],
   },
   {
-    group: "Creative and Communication",
-    tools: [
-      ["Canva", "Advanced"],
-      ["CapCut", "Operational use"],
-      ["Discord", "Team coordination"],
+    group: "Process and Team Operations",
+    items: [
+      "SOP development",
+      "KPI tracking",
+      "Workflow design",
+      "Task delegation",
+      "Team coordination",
+      "Process improvement",
+    ],
+  },
+  {
+    group: "Tools",
+    items: [
+      "Google Sheets - Intermediate",
+      "Microsoft Excel - Intermediate",
+      "Google Workspace",
+      "Canva",
+      "CapCut",
+      "Discord",
+    ],
+  },
+  {
+    group: "AI-Assisted Workflows",
+    items: [
+      "ChatGPT",
+      "Codex",
+      "Gemini",
+      "SOP and documentation support",
+      "Research and analysis support",
+      "Communication drafting",
+      "Repetitive operational task acceleration",
     ],
   },
 ];
 
 const experience = [
   {
-    period: "2020 - 2022",
-    title: "Built and operated a fast-growing ecommerce business",
+    period: "2020 - Present",
+    title: "Built ecommerce experience by operating the work directly",
     details:
-      "Managed listings, customer service, inventory, fulfillment, campaigns, and team coordination. The business grew, but weak systems showed why scale needs SOPs, reporting, KPIs, and process ownership.",
+      "Managed marketplace execution, pricing, inventory, fulfillment, campaigns, customer operations, content coordination, and team responsibility across independent ecommerce brands in Indonesia.",
   },
   {
-    period: "2023 - Present",
-    title: "Rebuilt operations through systems, dashboards, and documentation",
+    period: "Current direction",
+    title: "Translating hands-on operating experience into international ecommerce and business operations",
     details:
-      "Built Google Sheets dashboards, SOP libraries, KPI systems, CS schedules, order trackers, marketplace reports, AI-assisted documentation, and seller-center workflows across multiple brands.",
+      "The portfolio shows the operating systems behind the work: dashboards, pricing and margin routines, inventory workflows, SOP libraries, KPI trackers, customer operation schedules, and AI-assisted documentation with human review.",
   },
 ];
 
@@ -489,15 +559,18 @@ export default function Home() {
       address: { "@type": "PostalAddress", addressCountry: "Indonesia" },
       knowsAbout: [
         "Marketplace Operations",
+        "Commercial Operations",
+        "Pricing and Margin Management",
         "Shopee",
         "TikTok Shop",
+        "Lazada",
         "Tokopedia",
         "Zalora",
         "Google Sheets",
         "SOP Development",
         "KPI Design",
         "Inventory Management",
-        "Customer Support",
+        "Fulfillment Operations",
         "AI-assisted operations",
       ],
       sameAs: [LINKEDIN_URL],
@@ -549,14 +622,15 @@ export default function Home() {
         <div className="mx-auto grid min-h-[calc(100vh-73px)] max-w-7xl content-center gap-10 px-5 py-14 md:grid-cols-[1.02fr_0.98fr] md:px-8 md:py-16">
           <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <p className="mb-5 inline-flex rounded-md border border-emerald-200 bg-emerald-50 px-3 py-1 text-sm font-semibold text-emerald-800 dark:border-emerald-500/30 dark:bg-emerald-500/10 dark:text-emerald-300">
-              Ecommerce Operations Specialist | Indonesia
+              E-commerce & Marketplace Operations | Indonesia
             </p>
             <h1 className="max-w-4xl text-4xl font-semibold leading-[1.05] text-zinc-950 dark:text-white md:text-6xl">
-              Built ecommerce systems for 2,000+ SKUs across Shopee, TikTok Shop, Tokopedia, and Zalora.
+              Marketplace operator across Shopee, TikTok Shop, Lazada, Tokopedia, and Zalora.
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-8 text-zinc-600 dark:text-zinc-300 md:text-lg">
-              Evidence includes seller-center dashboards, Google Sheets controls, KPI reviews, SOP libraries, order
-              tracking, content workflows, and marketplace storefronts. The work is visible before the claims begin.
+              5+ years of hands-on experience managing multi-brand ecommerce operations: marketplace execution,
+              campaigns, pricing, inventory, fulfillment, process improvement, customer operations, and team
+              coordination. AI supports the workflow, but ecommerce operations remain the core.
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <a
@@ -592,14 +666,14 @@ export default function Home() {
           >
             <div className="border-b border-zinc-200 pb-4 dark:border-zinc-800">
               <p className="text-sm font-medium text-zinc-500 dark:text-zinc-400">60-second recruiter read</p>
-              <p className="mt-2 text-2xl font-semibold text-zinc-950 dark:text-white">This is operating proof, not portfolio decoration.</p>
+              <p className="mt-2 text-2xl font-semibold text-zinc-950 dark:text-white">Experienced ecommerce operator with inspectable proof.</p>
             </div>
             <div className="grid gap-3 pt-4">
               {[
-                "2,000+ SKUs, 50,000+ coordinated orders, and 300+ campaigns.",
-                "Dashboards for revenue, ads, orders, KPIs, and marketplace performance.",
-                "100+ SOPs across CS, fulfillment, HR, returns, COD, QC, inventory, and KPI workflows.",
-                "Seller-center and storefront proof across Shopee, TikTok Shop, Tokopedia, and Zalora.",
+                "2,000+ SKUs, approximately 50,000+ orders, and 300+ marketplace campaigns.",
+                "Hands-on marketplace work across Shopee, TikTok Shop, Lazada, Tokopedia, and Zalora.",
+                "Commercial operations: pricing, product cost updates, margin monitoring, and promotional pricing.",
+                "100+ SOPs and workflow controls across inventory, fulfillment, CS, KPI, QC, returns, and admin work.",
               ].map((item) => (
                 <div key={item} className="rounded-md border border-zinc-200 bg-white p-4 text-sm leading-6 text-zinc-700 dark:border-zinc-800 dark:bg-[#0b0e13] dark:text-zinc-300">
                   {item}
@@ -614,8 +688,8 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <SectionHeader
             eyebrow="Story"
-            title="The story matters because it explains the systems."
-            intro="Dea did not learn ecommerce as theory. She operated stores, managed the work, saw what broke, then rebuilt around dashboards, SOPs, KPIs, and review cadence."
+            title="Direct operating experience, translated into systems."
+            intro="Dea built her ecommerce experience by running the work directly rather than following a traditional corporate path. The value is practical: marketplace execution, commercial judgment, inventory control, process documentation, and team coordination."
           />
           <div className="grid gap-5 md:grid-cols-2">
             {experience.map((item) => (
@@ -656,12 +730,79 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="evidence" className="px-5 py-20 md:px-8 md:py-28">
+      <section id="case-studies" className="px-5 py-20 md:px-8 md:py-28">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
-            eyebrow="Evidence"
-            title="The assets support each other."
-            intro="Dashboards, SOPs, seller centers, order lists, and team systems are connected. That is what turns experience into hiring confidence."
+            eyebrow="Case Studies"
+            title="Business cases first. Screenshots as proof."
+            intro="Recruiters should not need to inspect every screenshot before understanding the value. These four cases summarize the operating work, then link to the evidence below."
+          />
+
+          <div className="grid gap-6">
+            {caseStudies.map((study, index) => (
+              <motion.article
+                key={study.title}
+                initial={{ opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.18 }}
+                transition={{ duration: 0.45 }}
+                className="grid gap-5 rounded-lg border border-zinc-200 bg-white p-5 dark:border-zinc-800 dark:bg-[#0b0e13] lg:grid-cols-[0.95fr_1.05fr] lg:p-6"
+              >
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-emerald-600 dark:text-emerald-400">
+                    Case {index + 1} | {study.focus}
+                  </p>
+                  <h3 className="mt-3 text-2xl font-semibold text-zinc-950 dark:text-white md:text-3xl">{study.title}</h3>
+                  <div className="mt-5 space-y-4 text-sm leading-7 text-zinc-600 dark:text-zinc-300">
+                    <p><span className="font-semibold text-zinc-950 dark:text-white">Challenge:</span> {study.challenge}</p>
+                    <p><span className="font-semibold text-zinc-950 dark:text-white">Approach:</span> {study.approach}</p>
+                    <div>
+                      <p className="font-semibold text-zinc-950 dark:text-white">Execution:</p>
+                      <ul className="mt-2 space-y-2">
+                        {study.execution.map((item) => (
+                          <li key={item} className="border-l border-zinc-300 pl-3 dark:border-zinc-700">{item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                    <p><span className="font-semibold text-zinc-950 dark:text-white">Business impact:</span> {study.impact}</p>
+                  </div>
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {study.skills.map((skill) => (
+                      <span key={skill} className="rounded-md bg-zinc-100 px-2.5 py-1 text-xs font-medium text-zinc-700 dark:bg-zinc-900 dark:text-zinc-300">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="grid gap-4 md:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
+                  {study.evidence.map((item) => (
+                    <div key={item.label} className="overflow-hidden rounded-lg border border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-950">
+                      <div className="relative aspect-[16/10] overflow-hidden border-b border-zinc-200 bg-zinc-100 dark:border-zinc-800 dark:bg-zinc-950">
+                        <Image
+                          src={item.image}
+                          alt={`${item.label} evidence`}
+                          fill
+                          sizes="(min-width: 1280px) 16vw, (min-width: 1024px) 35vw, 100vw"
+                          className="object-cover object-top"
+                        />
+                      </div>
+                      <p className="p-3 text-sm font-semibold text-zinc-950 dark:text-white">{item.label}</p>
+                    </div>
+                  ))}
+                </div>
+              </motion.article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="evidence" className="border-y border-zinc-200 bg-zinc-50 px-5 py-20 dark:border-zinc-800 dark:bg-zinc-950/70 md:px-8 md:py-28">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeader
+            eyebrow="Evidence Library"
+            title="The screenshots support the business cases."
+            intro="Dashboards, SOPs, seller centers, order lists, and team systems are kept below the case studies so the portfolio reads as operating proof, not a screenshot dump."
           />
 
           <div className="mb-8 grid gap-4 lg:grid-cols-4">
@@ -690,51 +831,32 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="case-study" className="border-y border-zinc-200 bg-zinc-50 px-5 py-20 dark:border-zinc-800 dark:bg-zinc-950/70 md:px-8 md:py-28">
+      <section id="ai-assisted-operations" className="px-5 py-20 md:px-8 md:py-28">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
-            eyebrow="Featured Case Study"
-            title={featuredCaseStudy.title}
-            intro="One detailed example of how the portfolio evidence connects into an operating system."
+            eyebrow="AI-Assisted Operations"
+            title="AI improves speed and structure. It does not replace business judgment."
+            intro="Dea integrates AI tools into operational workflows to accelerate research, documentation, analysis support, communication, and repetitive tasks while retaining human review and ecommerce context."
           />
-          <div className="grid gap-5 lg:grid-cols-[0.95fr_1.05fr]">
+          <div className="grid gap-5 lg:grid-cols-[0.9fr_1.1fr]">
             <div className="rounded-lg border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-[#0b0e13]">
-              {[
-                ["Situation", featuredCaseStudy.situation],
-                ["Problem", featuredCaseStudy.problem],
-                ["Business Result", featuredCaseStudy.result],
-                ["Lesson", featuredCaseStudy.lessons],
-              ].map(([label, text]) => (
-                <div key={label} className="border-b border-zinc-200 py-5 first:pt-0 last:border-0 last:pb-0 dark:border-zinc-800">
-                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-emerald-600 dark:text-emerald-400">{label}</p>
-                  <p className="mt-2 text-sm leading-7 text-zinc-600 dark:text-zinc-300">{text}</p>
-                </div>
-              ))}
-              <div className="pt-5">
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-emerald-600 dark:text-emerald-400">Actions</p>
-                <ul className="mt-3 space-y-3 text-sm leading-6 text-zinc-600 dark:text-zinc-300">
-                  {featuredCaseStudy.actions.map((action) => (
-                    <li key={action} className="border-l border-zinc-300 pl-3 dark:border-zinc-700">{action}</li>
-                  ))}
-                </ul>
+              <h3 className="text-2xl font-semibold text-zinc-950 dark:text-white">Practical tools</h3>
+              <div className="mt-5 grid gap-3">
+                {["ChatGPT", "Codex", "Gemini"].map((tool) => (
+                  <div key={tool} className="rounded-md bg-zinc-100 px-4 py-3 text-sm font-semibold text-zinc-800 dark:bg-zinc-900 dark:text-zinc-100">
+                    {tool}
+                  </div>
+                ))}
               </div>
+              <p className="mt-5 text-sm leading-7 text-zinc-600 dark:text-zinc-300">
+                This portfolio is also an example of AI-assisted execution: Dea supplied the business requirements,
+                content direction, validation, and final judgment while using Codex to help iterate and maintain the site.
+              </p>
             </div>
-            <div className="grid gap-5">
-              {featuredCaseStudy.evidence.map((item) => (
-                <div key={item.label} className="overflow-hidden rounded-lg border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-[#0b0e13]">
-                  <div className="relative aspect-[16/8] overflow-hidden border-b border-zinc-200 bg-zinc-100 dark:border-zinc-800 dark:bg-zinc-950">
-                    <Image
-                      src={item.image}
-                      alt={`${item.label} case study evidence`}
-                      fill
-                      sizes="(min-width: 1024px) 50vw, 100vw"
-                      className="object-cover object-top"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <p className="text-sm font-semibold text-zinc-950 dark:text-white">{item.label}</p>
-                    <p className="mt-2 text-sm leading-6 text-zinc-600 dark:text-zinc-300">{item.caption}</p>
-                  </div>
+            <div className="grid gap-3 sm:grid-cols-2">
+              {aiUseCases.map((item) => (
+                <div key={item} className="rounded-lg border border-zinc-200 bg-white p-4 text-sm leading-6 text-zinc-700 dark:border-zinc-800 dark:bg-[#0b0e13] dark:text-zinc-300">
+                  {item}
                 </div>
               ))}
             </div>
@@ -742,15 +864,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="projects" className="px-5 py-20 md:px-8 md:py-28">
+      <section id="projects" className="border-y border-zinc-200 bg-zinc-50 px-5 py-20 dark:border-zinc-800 dark:bg-zinc-950/70 md:px-8 md:py-28">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
-            eyebrow="Projects"
-            title="Projects explain what the evidence was built to solve."
-            intro="Each project follows the same operating logic: identify the failure point, build the control, then review the business result."
+            eyebrow="Supporting Systems"
+            title="Additional systems that support the core operating work."
+            intro="These are useful proof points, but they sit behind marketplace, commercial, fulfillment, and expansion case studies."
           />
-          <div className="grid gap-5 lg:grid-cols-3">
-            {projects.map((project) => (
+          <div className="grid gap-5 lg:grid-cols-2">
+            {supportProjects.map((project) => (
               <motion.article
                 key={project.title}
                 initial={{ opacity: 0, y: 18 }}
@@ -811,24 +933,21 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="tools" className="px-5 py-20 md:px-8 md:py-28">
+      <section id="skills" className="px-5 py-20 md:px-8 md:py-28">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
-            eyebrow="Tools"
-            title="Tools grouped by how they are used in operations."
-            intro="This is not a keyword list. The groups show where each tool fits in Dea's operating system."
+            eyebrow="Skills"
+            title="Competencies grouped by business use."
+            intro="The skills section is organized around ecommerce operations, commercial operations, fulfillment, team systems, tools, and AI-assisted workflows."
           />
-          <div className="grid gap-5 lg:grid-cols-4">
-            {toolGroups.map((group) => (
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {skillGroups.map((group) => (
               <div key={group.group} className="rounded-lg border border-zinc-200 bg-white p-5 dark:border-zinc-800 dark:bg-[#0b0e13]">
                 <h3 className="text-lg font-semibold text-zinc-950 dark:text-white">{group.group}</h3>
                 <div className="mt-5 space-y-3">
-                  {group.tools.map(([tool, level]) => (
-                    <div key={tool} className="flex items-center justify-between gap-4 border-b border-zinc-100 pb-3 last:border-0 last:pb-0 dark:border-zinc-800">
-                      <p className="text-sm font-medium text-zinc-800 dark:text-zinc-100">{tool}</p>
-                      <span className="shrink-0 rounded-md bg-zinc-100 px-2.5 py-1 text-xs font-semibold text-zinc-600 dark:bg-zinc-900 dark:text-zinc-300">
-                        {level}
-                      </span>
+                  {group.items.map((item) => (
+                    <div key={item} className="border-b border-zinc-100 pb-3 last:border-0 last:pb-0 dark:border-zinc-800">
+                      <p className="text-sm leading-6 text-zinc-700 dark:text-zinc-300">{item}</p>
                     </div>
                   ))}
                 </div>
@@ -843,8 +962,8 @@ export default function Home() {
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-emerald-300">Contact</p>
           <h2 className="mt-4 text-3xl font-semibold md:text-5xl">I enjoy building the operating systems that keep ecommerce teams from relying on memory.</h2>
           <p className="mt-5 max-w-2xl text-base leading-8 text-zinc-300 md:text-lg">
-            Best fit: ecommerce operations specialist, marketplace coordinator, operations coordinator, ecommerce VA,
-            customer support specialist, marketplace operations, or ecommerce project coordinator.
+            Best fit: e-commerce operations specialist, marketplace specialist, marketplace operations specialist,
+            e-commerce operations coordinator, business operations specialist, or operations specialist roles.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a href={`mailto:${CONTACT_EMAIL}`} className="rounded-md bg-white px-5 py-3 text-center text-sm font-semibold text-zinc-950 transition hover:bg-zinc-200">

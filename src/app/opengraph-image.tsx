@@ -23,13 +23,13 @@ export default function Image() {
           fontFamily: "Arial",
         }}
       >
-        <div style={{ color: "#6ee7b7", fontSize: 28, fontWeight: 700 }}>Evidence-led ecommerce operations portfolio</div>
+        <div style={{ color: "#6ee7b7", fontSize: 28, fontWeight: 700 }}>E-commerce & Marketplace Operations Portfolio</div>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div style={{ fontSize: 78, lineHeight: 1.04, fontWeight: 700, maxWidth: 980 }}>
             Dea Annisa Wilona
           </div>
           <div style={{ marginTop: 28, fontSize: 34, lineHeight: 1.32, color: "#d4d4d8", maxWidth: 900 }}>
-            Real dashboards, SOP systems, seller-center proof, KPI trackers, and marketplace operations.
+            Marketplace execution, pricing, inventory, fulfillment, SOPs, KPIs, and AI-assisted operations.
           </div>
         </div>
         <div style={{ display: "flex", gap: 18, fontSize: 24, color: "#a1a1aa" }}>
