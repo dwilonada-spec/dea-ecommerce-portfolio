@@ -3,13 +3,8 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #ffffff;
-  --foreground: #111113;
-}
-
-.dark {
-  --background: #080a0d;
-  --foreground: #f7f7f8;
+  --background: #f6f7fb;
+  --foreground: #0f172a;
 }
 
 @theme inline {
@@ -35,6 +30,6 @@ body {
 }
 
 ::selection {
-  background: #10b981;
+  background: #6161ff;
   color: #ffffff;
 }

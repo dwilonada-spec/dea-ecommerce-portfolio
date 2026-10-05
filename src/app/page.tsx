@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useSpring } from "framer-motion";
 import Image from "next/image";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 
 const CONTACT_EMAIL = "dwilona.da@gmail.com";
 const LINKEDIN_URL = "https://www.linkedin.com/in/deaawilona";
@@ -16,6 +16,29 @@ const navItems = [
   { label: "Skills", href: "#skills" },
   { label: "Contact", href: "#contact" },
 ];
+
+const platformChips = [
+  { label: "Shopee", className: "border-orange-200 bg-orange-50 text-orange-700" },
+  { label: "TikTok Shop", className: "border-slate-300 bg-white text-slate-800" },
+  { label: "Lazada", className: "border-violet-200 bg-violet-50 text-violet-700" },
+  { label: "Tokopedia", className: "border-emerald-200 bg-emerald-50 text-emerald-700" },
+  { label: "Zalora", className: "border-sky-200 bg-sky-50 text-sky-700" },
+];
+
+const workspaceRows = [
+  { label: "Orders tracker", owner: "Marketplace Ops", status: "Active", color: "bg-[#00c875]" },
+  { label: "Revenue review", owner: "Commercial Ops", status: "Weekly", color: "bg-[#6161ff]" },
+  { label: "SOP library", owner: "Process Ops", status: "Controlled", color: "bg-[#ffcb00]" },
+  { label: "CS schedule", owner: "Team Ops", status: "Live", color: "bg-[#ff5ac4]" },
+];
+
+const previewEvidence = [
+  { label: "Orders", image: "/evidence/orders-list-july-2026.webp" },
+  { label: "Revenue", image: "/evidence/reven-shopee-revenue-2025.webp" },
+  { label: "SOP", image: "/evidence/sop-master-lists.webp" },
+];
+
+const accentBorders = ["border-l-[#6161ff]", "border-l-[#00c875]", "border-l-[#ffcb00]", "border-l-[#ff5ac4]"];
 
 const metrics = [
   { value: "5+", label: "Years in ecommerce operations", proof: "Hands-on marketplace, commercial, fulfillment, customer, and team operations." },
@@ -461,38 +484,12 @@ function SectionHeader({
 }) {
   return (
     <div className="mx-auto mb-10 max-w-3xl text-center md:mb-14">
-      <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-emerald-600 dark:text-emerald-400">
+      <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-[#6161ff]">
         {eyebrow}
       </p>
-      <h2 className="text-3xl font-semibold text-zinc-950 dark:text-white md:text-5xl">{title}</h2>
-      <p className="mt-5 text-base leading-8 text-zinc-600 dark:text-zinc-300 md:text-lg">{intro}</p>
+      <h2 className="text-3xl font-semibold text-slate-950 md:text-5xl">{title}</h2>
+      <p className="mt-5 text-base leading-8 text-slate-600 md:text-lg">{intro}</p>
     </div>
-  );
-}
-
-function ThemeToggle() {
-  useEffect(() => {
-    const saved = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const nextDark = saved ? saved === "dark" : prefersDark;
-    document.documentElement.classList.toggle("dark", nextDark);
-  }, []);
-
-  function toggleTheme() {
-    const nextDark = !document.documentElement.classList.contains("dark");
-    localStorage.setItem("theme", nextDark ? "dark" : "light");
-    document.documentElement.classList.toggle("dark", nextDark);
-  }
-
-  return (
-    <button
-      type="button"
-      onClick={toggleTheme}
-      className="h-9 rounded-md border border-zinc-200 px-3 text-sm font-medium text-zinc-700 transition hover:border-zinc-400 hover:text-zinc-950 dark:border-zinc-800 dark:text-zinc-200 dark:hover:border-zinc-600 dark:hover:text-white"
-      aria-label="Switch color theme"
-    >
-      Theme
-    </button>
   );
 }
 
@@ -500,7 +497,96 @@ function ScrollProgress() {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, { stiffness: 120, damping: 24, restDelta: 0.001 });
 
-  return <motion.div style={{ scaleX }} className="fixed left-0 top-0 z-50 h-1 w-full origin-left bg-emerald-500" />;
+  return <motion.div style={{ scaleX }} className="fixed left-0 top-0 z-50 h-1 w-full origin-left bg-[#6161ff]" />;
+}
+
+function WorkspacePreview() {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7, delay: 0.1 }}
+      className="relative self-center rounded-lg border border-slate-200 bg-white p-3 shadow-[0_24px_70px_rgba(15,23,42,0.12)]"
+    >
+      <div className="rounded-md border border-slate-200 bg-[#f8f9fd]">
+        <div className="flex items-center justify-between border-b border-slate-200 px-4 py-3">
+          <div className="flex items-center gap-2">
+            <span className="h-2.5 w-2.5 rounded-full bg-[#ff5ac4]" />
+            <span className="h-2.5 w-2.5 rounded-full bg-[#ffcb00]" />
+            <span className="h-2.5 w-2.5 rounded-full bg-[#00c875]" />
+          </div>
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">Operations workspace</p>
+        </div>
+
+        <div className="grid gap-3 p-4 lg:grid-cols-[0.92fr_1.08fr]">
+          <div className="rounded-md border border-slate-200 bg-white p-4">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#6161ff]">Recruiter read</p>
+            <h2 className="mt-2 text-2xl font-semibold leading-tight text-slate-950">
+              Proof that the work was operated, not just described.
+            </h2>
+            <div className="mt-5 grid gap-2">
+              {workspaceRows.map((row) => (
+                <div key={row.label} className="grid grid-cols-[12px_1fr_auto] items-center gap-3 rounded-md border border-slate-100 bg-slate-50 px-3 py-2">
+                  <span className={`h-3 w-3 rounded-full ${row.color}`} />
+                  <div>
+                    <p className="text-sm font-semibold text-slate-950">{row.label}</p>
+                    <p className="text-xs text-slate-500">{row.owner}</p>
+                  </div>
+                  <span className="rounded-md border border-slate-200 bg-white px-2 py-1 text-xs font-semibold text-slate-600">
+                    {row.status}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="grid gap-3">
+            <div className="grid grid-cols-3 gap-3">
+              {[
+                ["2,000+", "SKUs"],
+                ["50,000+", "orders"],
+                ["100+", "SOPs"],
+              ].map(([value, label]) => (
+                <div key={label} className="rounded-md border border-slate-200 bg-white p-3">
+                  <p className="text-xl font-semibold text-slate-950">{value}</p>
+                  <p className="mt-1 text-xs font-medium text-slate-500">{label}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="grid gap-3 sm:grid-cols-3">
+              {previewEvidence.map((item) => (
+                <div key={item.label} className="overflow-hidden rounded-md border border-slate-200 bg-white">
+                  <div className="relative aspect-[4/3] bg-slate-100">
+                    <Image
+                      src={item.image}
+                      alt={`${item.label} operating evidence`}
+                      fill
+                      sizes="(min-width: 1024px) 14vw, 33vw"
+                      className="object-cover object-top"
+                      priority={item.label === "Orders"}
+                    />
+                  </div>
+                  <p className="border-t border-slate-100 px-3 py-2 text-xs font-semibold text-slate-700">{item.label}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="rounded-md border border-slate-200 bg-white p-4">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">Connected operating chain</p>
+              <div className="mt-3 flex flex-wrap gap-2 text-xs font-semibold text-slate-700">
+                {["Marketplace", "Orders", "KPI", "SOP", "Result"].map((step) => (
+                  <span key={step} className="rounded-md border border-slate-200 bg-[#f8f9fd] px-2.5 py-1">
+                    {step}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  );
 }
 
 function EvidenceCard({ item }: { item: (typeof evidenceItems)[number] }) {
@@ -510,9 +596,9 @@ function EvidenceCard({ item }: { item: (typeof evidenceItems)[number] }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.18 }}
       transition={{ duration: 0.45 }}
-      className="overflow-hidden rounded-lg border border-zinc-200 bg-white shadow-sm dark:border-zinc-800 dark:bg-[#0b0e13]"
+      className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-md"
     >
-      <div className="relative aspect-[16/10] overflow-hidden border-b border-zinc-200 bg-zinc-100 dark:border-zinc-800 dark:bg-zinc-950">
+      <div className="relative aspect-[16/10] overflow-hidden border-b border-slate-200 bg-slate-100">
         <Image
           src={item.image}
           alt={`${item.title} evidence screenshot`}
@@ -523,22 +609,22 @@ function EvidenceCard({ item }: { item: (typeof evidenceItems)[number] }) {
         />
       </div>
       <div className="p-5">
-        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-emerald-600 dark:text-emerald-400">
+        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#6161ff]">
           Evidence
         </p>
-        <h3 className="mt-2 text-xl font-semibold text-zinc-950 dark:text-white">{item.title}</h3>
-        <div className="mt-4 space-y-3 text-sm leading-6 text-zinc-600 dark:text-zinc-300">
+        <h3 className="mt-2 text-xl font-semibold text-slate-950">{item.title}</h3>
+        <div className="mt-4 space-y-3 text-sm leading-6 text-slate-600">
           <p>{item.purpose}</p>
           <p>
-            <span className="font-semibold text-zinc-950 dark:text-white">Hiring signal:</span> {item.problem}
+            <span className="font-semibold text-slate-950">Hiring signal:</span> {item.problem}
           </p>
           <p>
-            <span className="font-semibold text-zinc-950 dark:text-white">Related:</span> {item.project}
+            <span className="font-semibold text-slate-950">Related:</span> {item.project}
           </p>
         </div>
         <div className="mt-5 flex flex-wrap gap-2">
           {item.skills.map((skill) => (
-            <span key={skill} className="rounded-md bg-zinc-100 px-2.5 py-1 text-xs font-medium text-zinc-700 dark:bg-zinc-900 dark:text-zinc-300">
+            <span key={skill} className="rounded-md bg-[#f0f3ff] px-2.5 py-1 text-xs font-medium text-[#4040c7]">
               {skill}
             </span>
           ))}
@@ -586,13 +672,13 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen overflow-hidden bg-white text-zinc-950 dark:bg-[#080a0d] dark:text-white">
+    <main className="min-h-screen overflow-hidden bg-[#f6f7fb] text-slate-950">
       <ScrollProgress />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
 
-      <header className="sticky top-0 z-40 border-b border-zinc-200/70 bg-white/90 backdrop-blur-xl dark:border-zinc-800 dark:bg-[#080a0d]/88">
+      <header className="sticky top-0 z-40 border-b border-slate-200/70 bg-[#f6f7fb]/85 backdrop-blur-xl">
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
-          <a href="#home" className="text-sm font-semibold text-zinc-950 dark:text-white" aria-label="Go to home">
+          <a href="#home" className="text-sm font-semibold text-slate-950" aria-label="Go to home">
             Dea Annisa Wilona
           </a>
           <div className="hidden items-center gap-6 md:flex">
@@ -600,43 +686,47 @@ export default function Home() {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-sm font-medium text-zinc-500 transition hover:text-zinc-950 dark:text-zinc-400 dark:hover:text-white"
+                className="text-sm font-medium text-slate-500 transition hover:text-slate-950"
               >
                 {item.label}
               </a>
             ))}
           </div>
-          <div className="flex items-center gap-2">
-            <ThemeToggle />
-            <a
-              href="#contact"
-              className="hidden rounded-md bg-zinc-950 px-3.5 py-2 text-sm font-semibold text-white transition hover:bg-zinc-800 dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200 sm:inline-flex"
-            >
-              Contact
-            </a>
-          </div>
+          <a
+            href="#contact"
+            className="hidden rounded-md bg-slate-950 px-3.5 py-2 text-sm font-semibold text-white transition hover:bg-[#6161ff] sm:inline-flex"
+          >
+            Contact
+          </a>
         </nav>
       </header>
 
-      <section id="home" className="relative border-b border-zinc-200 dark:border-zinc-800">
-        <div className="mx-auto grid min-h-[calc(100vh-73px)] max-w-7xl content-center gap-10 px-5 py-14 md:grid-cols-[1.02fr_0.98fr] md:px-8 md:py-16">
+      <section id="home" className="relative border-b border-slate-200">
+        <div className="mx-auto grid min-h-[calc(100vh-73px)] max-w-7xl content-center gap-10 px-5 py-14 md:grid-cols-[0.92fr_1.08fr] md:px-8 md:py-16">
           <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <p className="mb-5 inline-flex rounded-md border border-emerald-200 bg-emerald-50 px-3 py-1 text-sm font-semibold text-emerald-800 dark:border-emerald-500/30 dark:bg-emerald-500/10 dark:text-emerald-300">
+            <p className="mb-5 inline-flex rounded-md border border-[#c9ccff] bg-white px-3 py-1 text-sm font-semibold text-[#4040c7] shadow-sm">
               E-commerce & Marketplace Operations | Indonesia
             </p>
-            <h1 className="max-w-4xl text-4xl font-semibold leading-[1.05] text-zinc-950 dark:text-white md:text-6xl">
-              Marketplace operator across Shopee, TikTok Shop, Lazada, Tokopedia, and Zalora.
+            <h1 className="max-w-4xl text-4xl font-semibold leading-[1.03] text-slate-950 md:text-6xl">
+              Marketplace operations portfolio built like a working system.
             </h1>
-            <p className="mt-6 max-w-2xl text-base leading-8 text-zinc-600 dark:text-zinc-300 md:text-lg">
+            <p className="mt-6 max-w-2xl text-base leading-8 text-slate-600 md:text-lg">
               5+ years of hands-on experience managing multi-brand ecommerce operations: marketplace execution,
               campaigns, pricing, inventory, fulfillment, process improvement, customer operations, and team
               coordination. AI supports the workflow, but ecommerce operations remain the core.
             </p>
+            <div className="mt-6 flex flex-wrap gap-2">
+              {platformChips.map((chip) => (
+                <span key={chip.label} className={`rounded-md border px-3 py-1.5 text-sm font-semibold ${chip.className}`}>
+                  {chip.label}
+                </span>
+              ))}
+            </div>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <a
                 href={RESUME_URL}
                 download
-                className="rounded-md bg-zinc-950 px-5 py-3 text-center text-sm font-semibold text-white transition hover:bg-zinc-800 dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200"
+                className="rounded-md bg-slate-950 px-5 py-3 text-center text-sm font-semibold text-white transition hover:bg-[#6161ff]"
               >
                 Download Resume
               </a>
@@ -644,43 +734,21 @@ export default function Home() {
                 href={LINKEDIN_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-md border border-zinc-300 px-5 py-3 text-center text-sm font-semibold text-zinc-800 transition hover:border-zinc-500 dark:border-zinc-700 dark:text-zinc-100 dark:hover:border-zinc-500"
+                className="rounded-md border border-slate-300 bg-white px-5 py-3 text-center text-sm font-semibold text-slate-800 transition hover:border-[#6161ff] hover:text-[#4040c7]"
               >
                 LinkedIn
               </a>
               <button
                 type="button"
                 onClick={copyEmail}
-                className="rounded-md border border-zinc-300 px-5 py-3 text-sm font-semibold text-zinc-800 transition hover:border-zinc-500 dark:border-zinc-700 dark:text-zinc-100 dark:hover:border-zinc-500"
+                className="rounded-md border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-800 transition hover:border-[#6161ff] hover:text-[#4040c7]"
               >
                 {copied ? "Email copied" : "Copy Email"}
               </button>
             </div>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.1 }}
-            className="self-center rounded-lg border border-zinc-200 bg-zinc-50 p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-950"
-          >
-            <div className="border-b border-zinc-200 pb-4 dark:border-zinc-800">
-              <p className="text-sm font-medium text-zinc-500 dark:text-zinc-400">60-second recruiter read</p>
-              <p className="mt-2 text-2xl font-semibold text-zinc-950 dark:text-white">Experienced ecommerce operator with inspectable proof.</p>
-            </div>
-            <div className="grid gap-3 pt-4">
-              {[
-                "2,000+ SKUs, approximately 50,000+ orders, and 300+ marketplace campaigns.",
-                "Hands-on marketplace work across Shopee, TikTok Shop, Lazada, Tokopedia, and Zalora.",
-                "Commercial operations: pricing, product cost updates, margin monitoring, and promotional pricing.",
-                "100+ SOPs and workflow controls across inventory, fulfillment, CS, KPI, QC, returns, and admin work.",
-              ].map((item) => (
-                <div key={item} className="rounded-md border border-zinc-200 bg-white p-4 text-sm leading-6 text-zinc-700 dark:border-zinc-800 dark:bg-[#0b0e13] dark:text-zinc-300">
-                  {item}
-                </div>
-              ))}
-            </div>
-          </motion.div>
+          <WorkspacePreview />
         </div>
       </section>
 
@@ -699,18 +767,18 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.25 }}
                 transition={{ duration: 0.45 }}
-                className="rounded-lg border border-zinc-200 bg-zinc-50 p-6 dark:border-zinc-800 dark:bg-zinc-950"
+                className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm"
               >
-                <p className="text-sm font-semibold text-emerald-700 dark:text-emerald-300">{item.period}</p>
-                <h3 className="mt-3 text-2xl font-semibold text-zinc-950 dark:text-white">{item.title}</h3>
-                <p className="mt-4 text-base leading-8 text-zinc-600 dark:text-zinc-300">{item.details}</p>
+                <p className="text-sm font-semibold text-[#4040c7]">{item.period}</p>
+                <h3 className="mt-3 text-2xl font-semibold text-slate-950">{item.title}</h3>
+                <p className="mt-4 text-base leading-8 text-slate-600">{item.details}</p>
               </motion.article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="border-y border-zinc-200 bg-zinc-50 px-5 py-20 dark:border-zinc-800 dark:bg-zinc-950/70 md:px-8 md:py-28">
+      <section className="border-y border-slate-200 bg-white px-5 py-20 md:px-8 md:py-28">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
             eyebrow="Operating Lessons"
@@ -718,12 +786,12 @@ export default function Home() {
             intro="These are the operating changes recruiters should look for when judging whether Dea can perform the job."
           />
           <div className="grid gap-4 md:grid-cols-3">
-            {transformations.map((item) => (
-              <div key={item.before} className="rounded-lg border border-zinc-200 bg-white p-5 dark:border-zinc-800 dark:bg-[#0b0e13]">
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-500">Before</p>
-                <h3 className="mt-2 text-lg font-semibold text-zinc-950 dark:text-white">{item.before}</h3>
-                <p className="mt-5 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-600 dark:text-emerald-400">After</p>
-                <p className="mt-2 text-sm leading-6 text-zinc-600 dark:text-zinc-300">{item.after}</p>
+            {transformations.map((item, index) => (
+              <div key={item.before} className={`rounded-lg border border-slate-200 bg-[#f8f9fd] p-5 shadow-sm ${accentBorders[index % accentBorders.length]} border-l-4`}>
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">Before</p>
+                <h3 className="mt-2 text-lg font-semibold text-slate-950">{item.before}</h3>
+                <p className="mt-5 text-xs font-semibold uppercase tracking-[0.16em] text-[#00a86b]">After</p>
+                <p className="mt-2 text-sm leading-6 text-slate-600">{item.after}</p>
               </div>
             ))}
           </div>
@@ -746,29 +814,29 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.18 }}
                 transition={{ duration: 0.45 }}
-                className="grid gap-5 rounded-lg border border-zinc-200 bg-white p-5 dark:border-zinc-800 dark:bg-[#0b0e13] lg:grid-cols-[0.95fr_1.05fr] lg:p-6"
+                className={`grid gap-5 rounded-lg border border-slate-200 bg-white p-5 shadow-sm ${accentBorders[index % accentBorders.length]} border-l-4 lg:grid-cols-[0.95fr_1.05fr] lg:p-6`}
               >
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-emerald-600 dark:text-emerald-400">
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#6161ff]">
                     Case {index + 1} | {study.focus}
                   </p>
-                  <h3 className="mt-3 text-2xl font-semibold text-zinc-950 dark:text-white md:text-3xl">{study.title}</h3>
-                  <div className="mt-5 space-y-4 text-sm leading-7 text-zinc-600 dark:text-zinc-300">
-                    <p><span className="font-semibold text-zinc-950 dark:text-white">Challenge:</span> {study.challenge}</p>
-                    <p><span className="font-semibold text-zinc-950 dark:text-white">Approach:</span> {study.approach}</p>
+                  <h3 className="mt-3 text-2xl font-semibold text-slate-950 md:text-3xl">{study.title}</h3>
+                  <div className="mt-5 space-y-4 text-sm leading-7 text-slate-600">
+                    <p><span className="font-semibold text-slate-950">Challenge:</span> {study.challenge}</p>
+                    <p><span className="font-semibold text-slate-950">Approach:</span> {study.approach}</p>
                     <div>
-                      <p className="font-semibold text-zinc-950 dark:text-white">Execution:</p>
+                      <p className="font-semibold text-slate-950">Execution:</p>
                       <ul className="mt-2 space-y-2">
                         {study.execution.map((item) => (
-                          <li key={item} className="border-l border-zinc-300 pl-3 dark:border-zinc-700">{item}</li>
+                          <li key={item} className="border-l border-slate-300 pl-3">{item}</li>
                         ))}
                       </ul>
                     </div>
-                    <p><span className="font-semibold text-zinc-950 dark:text-white">Business impact:</span> {study.impact}</p>
+                    <p><span className="font-semibold text-slate-950">Business impact:</span> {study.impact}</p>
                   </div>
                   <div className="mt-5 flex flex-wrap gap-2">
                     {study.skills.map((skill) => (
-                      <span key={skill} className="rounded-md bg-zinc-100 px-2.5 py-1 text-xs font-medium text-zinc-700 dark:bg-zinc-900 dark:text-zinc-300">
+                      <span key={skill} className="rounded-md bg-[#f0f3ff] px-2.5 py-1 text-xs font-medium text-[#4040c7]">
                         {skill}
                       </span>
                     ))}
@@ -777,8 +845,8 @@ export default function Home() {
 
                 <div className="grid gap-4 md:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
                   {study.evidence.map((item) => (
-                    <div key={item.label} className="overflow-hidden rounded-lg border border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-950">
-                      <div className="relative aspect-[16/10] overflow-hidden border-b border-zinc-200 bg-zinc-100 dark:border-zinc-800 dark:bg-zinc-950">
+                    <div key={item.label} className="overflow-hidden rounded-lg border border-slate-200 bg-[#f8f9fd]">
+                      <div className="relative aspect-[16/10] overflow-hidden border-b border-slate-200 bg-slate-100">
                         <Image
                           src={item.image}
                           alt={`${item.label} evidence`}
@@ -787,7 +855,7 @@ export default function Home() {
                           className="object-cover object-top"
                         />
                       </div>
-                      <p className="p-3 text-sm font-semibold text-zinc-950 dark:text-white">{item.label}</p>
+                      <p className="p-3 text-sm font-semibold text-slate-950">{item.label}</p>
                     </div>
                   ))}
                 </div>
@@ -797,7 +865,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="evidence" className="border-y border-zinc-200 bg-zinc-50 px-5 py-20 dark:border-zinc-800 dark:bg-zinc-950/70 md:px-8 md:py-28">
+      <section id="evidence" className="border-y border-slate-200 bg-white px-5 py-20 md:px-8 md:py-28">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
             eyebrow="Evidence Library"
@@ -807,15 +875,15 @@ export default function Home() {
 
           <div className="mb-8 grid gap-4 lg:grid-cols-4">
             {evidenceChains.map((chain) => (
-              <div key={chain.join("-")} className="rounded-lg border border-zinc-200 bg-white p-5 dark:border-zinc-800 dark:bg-[#0b0e13]">
-                <p className="mb-4 text-sm font-semibold text-zinc-950 dark:text-white">{chain[0]}</p>
+              <div key={chain.join("-")} className="rounded-lg border border-slate-200 bg-[#f8f9fd] p-5 shadow-sm">
+                <p className="mb-4 text-sm font-semibold text-slate-950">{chain[0]}</p>
                 <div className="space-y-3">
                   {chain.slice(1).map((step, index) => (
                     <div key={step} className="flex items-start gap-3">
-                      <span className="mt-1 h-5 w-5 shrink-0 rounded-full border border-emerald-300 text-center text-[11px] font-semibold leading-5 text-emerald-700 dark:border-emerald-500/50 dark:text-emerald-300">
+                      <span className="mt-1 h-5 w-5 shrink-0 rounded-full border border-[#c9ccff] bg-white text-center text-[11px] font-semibold leading-5 text-[#4040c7]">
                         {index + 1}
                       </span>
-                      <p className="text-sm leading-6 text-zinc-600 dark:text-zinc-300">{step}</p>
+                      <p className="text-sm leading-6 text-slate-600">{step}</p>
                     </div>
                   ))}
                 </div>
@@ -839,23 +907,23 @@ export default function Home() {
             intro="Dea integrates AI tools into operational workflows to accelerate research, documentation, analysis support, communication, and repetitive tasks while retaining human review and ecommerce context."
           />
           <div className="grid gap-5 lg:grid-cols-[0.9fr_1.1fr]">
-            <div className="rounded-lg border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-[#0b0e13]">
-              <h3 className="text-2xl font-semibold text-zinc-950 dark:text-white">Practical tools</h3>
+            <div className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
+              <h3 className="text-2xl font-semibold text-slate-950">Practical tools</h3>
               <div className="mt-5 grid gap-3">
                 {["ChatGPT", "Codex", "Gemini"].map((tool) => (
-                  <div key={tool} className="rounded-md bg-zinc-100 px-4 py-3 text-sm font-semibold text-zinc-800 dark:bg-zinc-900 dark:text-zinc-100">
+                  <div key={tool} className="rounded-md border border-slate-200 bg-[#f8f9fd] px-4 py-3 text-sm font-semibold text-slate-800">
                     {tool}
                   </div>
                 ))}
               </div>
-              <p className="mt-5 text-sm leading-7 text-zinc-600 dark:text-zinc-300">
+              <p className="mt-5 text-sm leading-7 text-slate-600">
                 This portfolio is also an example of AI-assisted execution: Dea supplied the business requirements,
                 content direction, validation, and final judgment while using Codex to help iterate and maintain the site.
               </p>
             </div>
             <div className="grid gap-3 sm:grid-cols-2">
               {aiUseCases.map((item) => (
-                <div key={item} className="rounded-lg border border-zinc-200 bg-white p-4 text-sm leading-6 text-zinc-700 dark:border-zinc-800 dark:bg-[#0b0e13] dark:text-zinc-300">
+                <div key={item} className="rounded-lg border border-slate-200 bg-white p-4 text-sm leading-6 text-slate-700 shadow-sm">
                   {item}
                 </div>
               ))}
@@ -864,7 +932,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="projects" className="border-y border-zinc-200 bg-zinc-50 px-5 py-20 dark:border-zinc-800 dark:bg-zinc-950/70 md:px-8 md:py-28">
+      <section id="projects" className="border-y border-slate-200 bg-white px-5 py-20 md:px-8 md:py-28">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
             eyebrow="Supporting Systems"
@@ -879,24 +947,24 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.45 }}
-                className="rounded-lg border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-[#0b0e13]"
+                className="rounded-lg border border-slate-200 bg-[#f8f9fd] p-6 shadow-sm"
               >
-                <h3 className="text-xl font-semibold text-zinc-950 dark:text-white">{project.title}</h3>
-                <div className="mt-5 space-y-4 text-sm leading-6 text-zinc-600 dark:text-zinc-300">
-                  <p><span className="font-semibold text-zinc-950 dark:text-white">Problem:</span> {project.problem}</p>
+                <h3 className="text-xl font-semibold text-slate-950">{project.title}</h3>
+                <div className="mt-5 space-y-4 text-sm leading-6 text-slate-600">
+                  <p><span className="font-semibold text-slate-950">Problem:</span> {project.problem}</p>
                   <div>
-                    <p className="font-semibold text-zinc-950 dark:text-white">Action:</p>
+                    <p className="font-semibold text-slate-950">Action:</p>
                     <ul className="mt-2 space-y-2">
                       {project.actions.map((action) => (
-                        <li key={action} className="border-l border-zinc-300 pl-3 dark:border-zinc-700">{action}</li>
+                        <li key={action} className="border-l border-slate-300 pl-3">{action}</li>
                       ))}
                     </ul>
                   </div>
-                  <p><span className="font-semibold text-zinc-950 dark:text-white">Business result:</span> {project.outcome}</p>
+                  <p><span className="font-semibold text-slate-950">Business result:</span> {project.outcome}</p>
                 </div>
                 <div className="mt-5 flex flex-wrap gap-2">
                   {project.skills.map((skill) => (
-                    <span key={skill} className="rounded-md bg-zinc-100 px-2.5 py-1 text-xs font-medium text-zinc-700 dark:bg-zinc-900 dark:text-zinc-300">
+                    <span key={skill} className="rounded-md bg-white px-2.5 py-1 text-xs font-medium text-[#4040c7]">
                       {skill}
                     </span>
                   ))}
@@ -907,7 +975,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="results" className="border-y border-zinc-200 bg-zinc-50 px-5 py-20 dark:border-zinc-800 dark:bg-zinc-950/70 md:px-8 md:py-28">
+      <section id="results" className="border-y border-slate-200 bg-[#f6f7fb] px-5 py-20 md:px-8 md:py-28">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
             eyebrow="Results"
@@ -922,11 +990,11 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true, amount: 0.4 }}
                 transition={{ duration: 0.45 }}
-                className="rounded-lg border border-zinc-200 bg-white p-5 dark:border-zinc-800 dark:bg-[#0b0e13]"
+                className="rounded-lg border border-slate-200 bg-white p-5 shadow-sm"
               >
-                <p className="text-4xl font-semibold text-zinc-950 dark:text-white">{metric.value}</p>
-                <p className="mt-3 text-sm font-semibold text-zinc-800 dark:text-zinc-100">{metric.label}</p>
-                <p className="mt-3 text-sm leading-6 text-zinc-600 dark:text-zinc-300">{metric.proof}</p>
+                <p className="text-4xl font-semibold text-slate-950">{metric.value}</p>
+                <p className="mt-3 text-sm font-semibold text-slate-800">{metric.label}</p>
+                <p className="mt-3 text-sm leading-6 text-slate-600">{metric.proof}</p>
               </motion.div>
             ))}
           </div>
@@ -942,12 +1010,12 @@ export default function Home() {
           />
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {skillGroups.map((group) => (
-              <div key={group.group} className="rounded-lg border border-zinc-200 bg-white p-5 dark:border-zinc-800 dark:bg-[#0b0e13]">
-                <h3 className="text-lg font-semibold text-zinc-950 dark:text-white">{group.group}</h3>
+              <div key={group.group} className="rounded-lg border border-slate-200 bg-white p-5 shadow-sm">
+                <h3 className="text-lg font-semibold text-slate-950">{group.group}</h3>
                 <div className="mt-5 space-y-3">
                   {group.items.map((item) => (
-                    <div key={item} className="border-b border-zinc-100 pb-3 last:border-0 last:pb-0 dark:border-zinc-800">
-                      <p className="text-sm leading-6 text-zinc-700 dark:text-zinc-300">{item}</p>
+                    <div key={item} className="border-b border-slate-100 pb-3 last:border-0 last:pb-0">
+                      <p className="text-sm leading-6 text-slate-700">{item}</p>
                     </div>
                   ))}
                 </div>
@@ -958,15 +1026,15 @@ export default function Home() {
       </section>
 
       <section id="contact" className="px-5 pb-20 md:px-8 md:pb-28">
-        <div className="mx-auto max-w-4xl rounded-lg border border-zinc-200 bg-zinc-950 p-8 text-white dark:border-zinc-800 md:p-12">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-emerald-300">Contact</p>
+        <div className="mx-auto max-w-4xl rounded-lg border border-slate-800 bg-slate-950 p-8 text-white shadow-[0_24px_70px_rgba(15,23,42,0.18)] md:p-12">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#ffcb00]">Contact</p>
           <h2 className="mt-4 text-3xl font-semibold md:text-5xl">I enjoy building the operating systems that keep ecommerce teams from relying on memory.</h2>
-          <p className="mt-5 max-w-2xl text-base leading-8 text-zinc-300 md:text-lg">
+          <p className="mt-5 max-w-2xl text-base leading-8 text-slate-300 md:text-lg">
             Best fit: e-commerce operations specialist, marketplace specialist, marketplace operations specialist,
             e-commerce operations coordinator, business operations specialist, or operations specialist roles.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a href={`mailto:${CONTACT_EMAIL}`} className="rounded-md bg-white px-5 py-3 text-center text-sm font-semibold text-zinc-950 transition hover:bg-zinc-200">
+            <a href={`mailto:${CONTACT_EMAIL}`} className="rounded-md bg-white px-5 py-3 text-center text-sm font-semibold text-slate-950 transition hover:bg-[#ffcb00]">
               Email Dea
             </a>
             <a href={LINKEDIN_URL} target="_blank" rel="noreferrer" className="rounded-md border border-white/25 px-5 py-3 text-center text-sm font-semibold text-white transition hover:border-white/55">
